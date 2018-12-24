@@ -1,10 +1,10 @@
 .title-col {
-  background-image: linear-gradient(to bottom right, #3f62ae, red);
+  background-image: linear-gradient(to bottom right, #3f62ae, #e26506);
   /* Standard syntax (must be last) */
 }
 
 .font-size {
-  font-size: 14px;
+  font-size: 20px !important;
 }
 
 .btn-radius {
@@ -13,4 +13,29 @@
 
 .vertical-center {
   vertical-align: text-top;
+}
+
+.btn-color-account {
+  background-color: #e26506;
+
+  &:active {
+    background-color: #ba5305;
+
+  }
+}
+
+.btn-color-rewards {
+  background-color: #83792a;
+}
+
+.btn-color-corperate {
+  background-color: gray;
+}
+
+.back-trans.bar-header {
+  background: transparent;
+}
+
+.txt-white {
+  color: white;
 }
