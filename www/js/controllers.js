@@ -43,23 +43,19 @@ angular
     };
   })
 
-  .controller("HomeCtrl", function($scope) {
-    module.controller("HomeCtrl", function($cordovaInAppBrowser) {
-      var options = {
-        location: "yes",
-        clearcache: "yes",
-        toolbar: "no"
-      };
-
+  .controller("HomeCtrl", function($scope, $cordovaInAppBrowser) {
+    var options = {
+      location: "yes",
+      clearcache: "yes",
+      toolbar: "no"
+    };
+    $scope.inAppOpen = function() {
       document.addEventListener("deviceready", function() {
-        $cordovaInAppBrowser
-          .open("http://ngcordova.com", "_blank", options)
-          .then(function(event) {
-            // success
-          })
-          .catch(function(event) {
-            // error
-          });
+        $cordovaInAppBrowser.open(
+          "https://github.com/ionic-team/ng-cordova/issues/1452",
+          "_blank",
+          options
+        );
       });
-    });
+    };
   });

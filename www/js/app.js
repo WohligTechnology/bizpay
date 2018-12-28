@@ -4,10 +4,11 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular
+  .module("starter", ["ionic", "starter.controllers", "ngCordova"])
 
-  .run(function ($ionicPlatform) {
-    $ionicPlatform.ready(function () {
+  .run(function($ionicPlatform) {
+    $ionicPlatform.ready(function() {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
       // for form inputs).
       // The reason we default this to hidden is that native apps don't usually show an accessory bar, at
@@ -26,54 +27,53 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     });
   })
 
-  .config(function ($stateProvider, $urlRouterProvider) {
+  .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
 
-      .state('app', {
-        url: '/app',
+      .state("app", {
+        url: "/app",
         abstract: true,
-        templateUrl: 'templates/menu.html',
-        controller: 'AppCtrl'
+        templateUrl: "templates/menu.html",
+        controller: "AppCtrl"
       })
 
-      .state('app.home', {
-        url: '/home',
+      .state("app.home", {
+        url: "/home",
         views: {
-          'menuContent': {
-            templateUrl: 'templates/home.html',
-            controller: 'HomeCtrl'
+          menuContent: {
+            templateUrl: "templates/home.html",
+            controller: "HomeCtrl"
           }
         }
       })
-      .state('app.trade', {
-        url: '/trade',
+      .state("app.trade", {
+        url: "/trade",
         views: {
-          'menuContent': {
-            templateUrl: 'templates/trade.html',
-            controller: 'TradeCtrl'
+          menuContent: {
+            templateUrl: "templates/trade.html",
+            controller: "TradeCtrl"
           }
         }
       })
-      .state('app.account', {
-        url: '/account',
+      .state("app.account", {
+        url: "/account",
         views: {
-          'menuContent': {
-            templateUrl: 'templates/account.html',
-            controller: 'AccountCtrl'
+          menuContent: {
+            templateUrl: "templates/account.html",
+            controller: "AccountCtrl"
           }
         }
       })
-      .state('app.shop', {
-        url: '/shop',
+      .state("app.shop", {
+        url: "/shop",
         views: {
-          'menuContent': {
-            templateUrl: 'templates/shop.html',
-            controller: 'ShopCtrl'
+          menuContent: {
+            templateUrl: "templates/shop.html",
+            controller: "ShopCtrl"
           }
         }
-      })
-
+      });
 
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/app/playlists');
+    $urlRouterProvider.otherwise("/app/home");
   });
