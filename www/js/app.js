@@ -7,8 +7,8 @@
 angular
   .module("starter", ["ionic", "starter.controllers", "ngCordova"])
 
-  .run(function($ionicPlatform) {
-    $ionicPlatform.ready(function() {
+  .run(function ($ionicPlatform) {
+    $ionicPlatform.ready(function () {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
       // for form inputs).
       // The reason we default this to hidden is that native apps don't usually show an accessory bar, at
@@ -27,7 +27,7 @@ angular
     });
   })
 
-  .config(function($stateProvider, $urlRouterProvider) {
+  .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
 
       .state("app", {
