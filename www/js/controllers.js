@@ -42,23 +42,31 @@ angular.module('starter.controllers', [])
   })
 
 
-  .controller('HomeCtrl', function ($scope) {
-      module.controller('HomeCtrl', function ($cordovaInAppBrowser) {
+  .controller('HomeCtrl', function ($scope, $cordovaInAppBrowser) {
 
-        var options = {
-          location: 'yes',
-          clearcache: 'yes',
-          toolbar: 'no'
-        };
-
-        document.addEventListener("deviceready", function () {
-          $cordovaInAppBrowser.open('http://ngcordova.com', '_blank', options)
-            .then(function (event) {
-              // success
-            })
-            .catch(function (event) {
-              // error
-            });
+    var options = {
+      location: 'yes',
+      clearcache: 'yes',
+      toolbar: 'no'
+    };
+    $scope.tradeRoute = function () {
+      $cordovaInAppBrowser.open('http://ngcordova.com', '_blank', options)
+        .then(function (event) {
+          // success
         })
-      })
+        .catch(function (event) {
+          // error
+        });
     }
+
+    $scope.accountRoute = function () {
+      $cordovaInAppBrowser.open('http://wohlig.com', '_blank', options)
+        .then(function (event) {
+          // success
+        })
+        .catch(function (event) {
+          // error
+        });
+    }
+
+  })
