@@ -41,6 +41,24 @@ angular.module('starter.controllers', [])
     };
   })
 
-  .controller('PlaylistsCtrl', function ($scope) {
 
-  })
+  .controller('HomeCtrl', function ($scope) {
+      module.controller('HomeCtrl', function ($cordovaInAppBrowser) {
+
+        var options = {
+          location: 'yes',
+          clearcache: 'yes',
+          toolbar: 'no'
+        };
+
+        document.addEventListener("deviceready", function () {
+          $cordovaInAppBrowser.open('http://ngcordova.com', '_blank', options)
+            .then(function (event) {
+              // success
+            })
+            .catch(function (event) {
+              // error
+            });
+        })
+      })
+    }
