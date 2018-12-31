@@ -51,7 +51,10 @@ angular
       hideurlbar: 'yes',
       clearcache: 'yes',
       toolbar: 'no',
-      zoom: 'no'
+      zoom: 'no',
+      hidenavigationbuttons: 'no',
+      closebuttoncaption: 'Back',
+      toolbarcolor: 'linear-gradient(to bottom right, #3f62ae, #e26506);'
       // footer: 'yes'
     };
     $scope.tradeRoute = function () {
