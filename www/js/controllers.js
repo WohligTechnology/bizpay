@@ -47,10 +47,12 @@ angular
   .controller('HomeCtrl', function ($scope, $cordovaInAppBrowser) {
 
     var options = {
-      location: 'no',
+      location: 'yes',
+      hideurlbar: 'yes',
       clearcache: 'yes',
       toolbar: 'no',
-      footer: 'yes'
+      zoom: 'no'
+      // footer: 'yes'
     };
     $scope.tradeRoute = function () {
       $cordovaInAppBrowser.open('http://www.mybizpayetrade.com/', '_self', options)
