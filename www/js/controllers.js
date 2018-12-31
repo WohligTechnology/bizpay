@@ -47,12 +47,12 @@ angular
   .controller('HomeCtrl', function ($scope, $cordovaInAppBrowser) {
 
     var options = {
-      location: 'yes',
+      location: 'no',
       clearcache: 'yes',
       toolbar: 'no'
     };
     $scope.tradeRoute = function () {
-      $cordovaInAppBrowser.open('http://www.mybizpayetrade.com/', '_blank', options)
+      $cordovaInAppBrowser.open('http://www.mybizpayetrade.com/', '_self', options)
         .then(function (event) {
           // successx
         })
@@ -62,7 +62,7 @@ angular
     }
 
     $scope.accountRoute = function () {
-      $cordovaInAppBrowser.open('https://account.bizpaye.com/', '_blank', options)
+      $cordovaInAppBrowser.open('https://account.bizpaye.com/', '_self', options)
         .then(function (event) {
           // success
         })
@@ -72,7 +72,7 @@ angular
     }
 
     $scope.shopRoute = function () {
-      $cordovaInAppBrowser.open('https://account.bizpaye.com/store', '_blank', options)
+      $cordovaInAppBrowser.open('https://account.bizpaye.com/store', '_self', options)
         .then(function (event) {
           // success
         })
@@ -82,7 +82,7 @@ angular
     }
 
     $scope.propertyRoute = function () {
-      $cordovaInAppBrowser.open('http://www.mybizpayetrade.com/BIZpaye-Property--Investments--Properties-For-Sale/4207', '_blank', options)
+      $cordovaInAppBrowser.open('http://www.mybizpayetrade.com/BIZpaye-Property--Investments--Properties-For-Sale/4207', '_self', options)
         .then(function (event) {
           // success
         })
@@ -92,7 +92,7 @@ angular
     }
 
     $scope.corperateRoute = function () {
-      $cordovaInAppBrowser.open('http://www.mybizpayetrade.com/BIZpaye-Corporate-Trading-Division/4174', '_blank', options)
+      $cordovaInAppBrowser.open('http://www.mybizpayetrade.com/BIZpaye-Corporate-Trading-Division/4174', '_self', options)
         .then(function (event) {
           // success
         })
@@ -102,7 +102,7 @@ angular
     }
 
     $scope.radioRoute = function () {
-      $cordovaInAppBrowser.open('http://www.radiobizpaye.com/', '_blank', options)
+      $cordovaInAppBrowser.open('http://www.radiobizpaye.com/', '_self', options)
         .then(function (event) {
           // success
         })
@@ -112,7 +112,7 @@ angular
     }
 
     $scope.rewardRoute = function () {
-      $cordovaInAppBrowser.open('http://www.mybizpayetrade.com/BIZpaye-BONUS-Program-/4181', '_blank', options)
+      $cordovaInAppBrowser.open('http://www.mybizpayetrade.com/BIZpaye-BONUS-Program-/4181', '_self', options)
         .then(function (event) {
           // success
         })
@@ -122,7 +122,7 @@ angular
     }
 
     $scope.franchiseRoute = function () {
-      $cordovaInAppBrowser.open('http://www.mybizpayetrade.com/About-BIZpaye-Franchising/4177', '_blank', options)
+      $cordovaInAppBrowser.open('http://www.mybizpayetrade.com/About-BIZpaye-Franchising/4177', '_self', options)
         .then(function (event) {
           // success
         })

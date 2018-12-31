@@ -9891,14 +9891,18 @@ a.button {
 
 .btn-color-account {
   background-color: #e26506; }
-  .btn-color-account:active {
+  .btn-color-account:active, .btn-color-account.activated {
     background-color: #ba5305; }
 
 .btn-color-rewards {
   background-color: #83792a; }
+  .btn-color-rewards:active, .btn-color-rewards.activated {
+    background-color: #675f21; }
 
 .btn-color-corperate {
   background-color: gray; }
+  .btn-color-corperate:active, .btn-color-corperate.activated {
+    background-color: #676666; }
 
 .back-trans.bar-header {
   background: transparent; }

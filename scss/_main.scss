@@ -18,7 +18,8 @@
 .btn-color-account {
   background-color: #e26506;
 
-  &:active {
+  &:active,
+  &.activated {
     background-color: #ba5305;
 
   }
@@ -26,10 +27,22 @@
 
 .btn-color-rewards {
   background-color: #83792a;
+
+  &:active,
+  &.activated {
+    background-color: #675f21;
+
+  }
 }
 
 .btn-color-corperate {
   background-color: gray;
+
+  &:active,
+  &.activated {
+    background-color: #676666;
+
+  }
 }
 
 .back-trans.bar-header {
