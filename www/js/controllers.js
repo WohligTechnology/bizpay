@@ -49,7 +49,8 @@ angular
     var options = {
       location: 'no',
       clearcache: 'yes',
-      toolbar: 'no'
+      toolbar: 'no',
+      footer: 'yes'
     };
     $scope.tradeRoute = function () {
       $cordovaInAppBrowser.open('http://www.mybizpayetrade.com/', '_self', options)
