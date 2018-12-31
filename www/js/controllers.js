@@ -53,7 +53,7 @@ angular
       toolbar: 'no',
       zoom: 'no',
       hidenavigationbuttons: 'yes',
-      closebuttoncaption: 'ion-ios-arrow-back Back',
+      closebuttoncaption: ' Back',
       toolbarcolor: '#3f62ae'
     };
     $scope.tradeRoute = function () {
