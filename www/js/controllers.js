@@ -52,7 +52,17 @@ angular
       toolbar: 'no'
     };
     $scope.tradeRoute = function () {
-      $cordovaInAppBrowser.open('http://ngcordova.com', '_blank', options)
+      $cordovaInAppBrowser.open('http://www.mybizpayetrade.com/', '_blank', options)
+        .then(function (event) {
+          // successx
+        })
+        .catch(function (event) {
+          // error
+        });
+    }
+
+    $scope.accountRoute = function () {
+      $cordovaInAppBrowser.open('https://account.bizpaye.com/', '_blank', options)
         .then(function (event) {
           // success
         })
@@ -61,8 +71,8 @@ angular
         });
     }
 
-    $scope.accountRoute = function () {
-      $cordovaInAppBrowser.open('http://wohlig.com', '_blank', options)
+    $scope.shopRoute = function () {
+      $cordovaInAppBrowser.open('https://account.bizpaye.com/store', '_blank', options)
         .then(function (event) {
           // success
         })
@@ -70,5 +80,57 @@ angular
           // error
         });
     }
+
+    $scope.propertyRoute = function () {
+      $cordovaInAppBrowser.open('http://www.mybizpayetrade.com/BIZpaye-Property--Investments--Properties-For-Sale/4207', '_blank', options)
+        .then(function (event) {
+          // success
+        })
+        .catch(function (event) {
+          // error
+        });
+    }
+
+    $scope.corperateRoute = function () {
+      $cordovaInAppBrowser.open('http://www.mybizpayetrade.com/BIZpaye-Corporate-Trading-Division/4174', '_blank', options)
+        .then(function (event) {
+          // success
+        })
+        .catch(function (event) {
+          // error
+        });
+    }
+
+    $scope.radioRoute = function () {
+      $cordovaInAppBrowser.open('http://www.radiobizpaye.com/', '_blank', options)
+        .then(function (event) {
+          // success
+        })
+        .catch(function (event) {
+          // error
+        });
+    }
+
+    $scope.rewardRoute = function () {
+      $cordovaInAppBrowser.open('http://www.mybizpayetrade.com/BIZpaye-BONUS-Program-/4181', '_blank', options)
+        .then(function (event) {
+          // success
+        })
+        .catch(function (event) {
+          // error
+        });
+    }
+
+    $scope.franchiseRoute = function () {
+      $cordovaInAppBrowser.open('http://www.mybizpayetrade.com/About-BIZpaye-Franchising/4177', '_blank', options)
+        .then(function (event) {
+          // success
+        })
+        .catch(function (event) {
+          // error
+        });
+    }
+
+
 
   })
