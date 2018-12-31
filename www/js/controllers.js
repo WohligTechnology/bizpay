@@ -54,7 +54,7 @@ angular
       zoom: 'no',
       hidenavigationbuttons: 'yes',
       closebuttoncaption: 'Back',
-      toolbarcolor: '#3f62ae'
+      toolbarcolor: '#3f62ae00'
     };
     $scope.tradeRoute = function () {
       $cordovaInAppBrowser.open('http://www.mybizpayetrade.com/', '_self', options)
