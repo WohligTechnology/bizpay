@@ -53,8 +53,7 @@ angular
       toolbar: 'no',
       zoom: 'no',
       hidenavigationbuttons: 'no',
-      closebuttoncaption: 'Back',
-      toolbarcolor: 'linear-gradient(to bottom right, #3f62ae, #e26506);'
+      closebuttoncaption: 'Back'
       // footer: 'yes'
     };
     $scope.tradeRoute = function () {
