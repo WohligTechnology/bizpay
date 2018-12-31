@@ -54,7 +54,6 @@ angular
       zoom: 'no',
       hidenavigationbuttons: 'no',
       closebuttoncaption: 'Back'
-      // footer: 'yes'
     };
     $scope.tradeRoute = function () {
       $cordovaInAppBrowser.open('http://www.mybizpayetrade.com/', '_self', options)
