@@ -69,8 +69,8 @@ angular.module("starter.controllers", [])
 
       Service.getCategory(function (data) {
         if (data.data.value) {
-          $scope.categoryData = data.data.data.results;
-          $scope.categoryData = _.chunk($scope.categoryData,2)
+          $scope.categoryData = _.orderBy(data.data.data.results, 'order');
+          $scope.categoryData = _.chunk($scope.categoryData, 2)
           console.log($scope.categoryData, data);
           $scope.totalItems = data.data.data.total;
           $scope.maxRow = data.data.data.options.count;
