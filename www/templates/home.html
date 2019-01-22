@@ -3,29 +3,31 @@
     <p class="text-center">
       Welcome to The BIZpaye International Group Of Companies
     </p>
-    <div class="row">
-      <!-- My BIZpaye trade -->
-      <div class="col padding">
-        <a class="button btn-radius button-positive card font-size" ng-click="tradeRoute();">
-          <img class="vertical-center padding-bottom" src="img/trade.png" width="100%" alt="">
+    <div class="row" ng-repeat="x in categoryData">
+      <div class="col padding" ng-repeat="category in x">
+        <a class="button btn-radius card font-size" ng-class="{'button-positive':category.color=='blue','btn-color-account':category.color=='orange','button-calm':category.color=='light blue','button-balanced':category.color=='green','btn-color-corperate':category.color=='gray', 'button-assertive':category.color=='red','btn-color-rewards':category.color=='yellow', 'button-royal':category.color=='violet'}"
+          ng-click="redirectUrl({{category.url}});">
+          <img class="vertical-center padding-bottom" ng-src="{{category.image | uploadpath }}" width="100%" alt="{{category.image}}">
         </a>
       </div>
+
+
       <!-- My BIZpaye Account -->
-      <div class="col padding">
+      <!-- <div class="col padding">
         <a class="button btn-color-account btn-radius card font-size" ng-click="accountRoute();">
           <img class="vertical-center padding-bottom" src="img/account.png" width="100%" alt="">
         </a>
       </div>
     </div>
     <div class="row">
-      <!-- My BIZpaye shop -->
+
       <div class="col padding">
         <a class="button btn-radius button-calm card font-size" ng-click="shopRoute();">
 
           <img class="vertical-center padding-bottom" src="img/shop.png" width="100%" alt="" />
         </a>
       </div>
-      <!-- My BIZpaye property -->
+
       <div class="col padding">
         <a class="button btn-radius button-balanced card font-size" ng-click="propertyRoute();">
 
@@ -34,14 +36,14 @@
       </div>
     </div>
     <div class="row">
-      <!-- My BIZpaye corperate -->
+
       <div class="col padding">
         <a class="button btn-radius btn-color-corperate card font-size" ng-click="corperateRoute();">
 
           <img class="vertical-center padding-bottom" src="img/corperate.png" width="100%" alt="" />
         </a>
       </div>
-      <!-- My BIZpaye radio -->
+
       <div class="col padding">
         <a class="button btn-radius button-assertive card font-size" ng-click="radioRoute();">
 
@@ -50,20 +52,20 @@
       </div>
     </div>
     <div class="row">
-      <!-- My BIZpaye rewards -->
+
       <div class="col padding">
         <a class="button btn-radius btn-color-rewards card font-size" ng-click="rewardRoute();">
 
           <img class="vertical-center padding-bottom" src="img/rewards.png" width="100%" alt="" />
         </a>
       </div>
-      <!-- My BIZpaye franchise -->
+
       <div class="col padding">
         <a class="button btn-radius button-royal card font-size" ng-click="franchiseRoute();">
 
           <img class="vertical-center padding-bottom" src="img/franchise.png" width="100%" alt="" />
         </a>
-      </div>
+      </div> -->
     </div>
   </ion-content>
 </ion-view>

@@ -1,6 +1,4 @@
-angular
-  .module("starter.controllers", [])
-
+angular.module("starter.controllers", [])
   .controller("AppCtrl", function ($scope, $ionicModal, $timeout) {
     // With the new view caching in Ionic, Controllers are only called
     // when they are recreated or on app start, instead of every page change.
@@ -8,7 +6,6 @@ angular
     // listen for the $ionicView.enter event:
     //$scope.$on('$ionicView.enter', function(e) {
     //});
-
     // Form data for the login modal
     $scope.loginData = {};
 
@@ -44,7 +41,7 @@ angular
   })
 
 
-  .controller('HomeCtrl', function ($scope, $cordovaInAppBrowser) {
+  .controller('HomeCtrl', function ($scope, $cordovaInAppBrowser, Service) {
 
     var options = {
       location: 'yes',
@@ -56,6 +53,35 @@ angular
       closebuttoncaption: '⟨ Back',
       toolbarcolor: '#3f62ae'
     };
+
+    $scope.redirectUrl = function (data) {
+      $cordovaInAppBrowser.open(data, '_self', options)
+        .then(function (event) {
+          // successx
+        })
+        .catch(function (event) {
+          // error
+        });
+    }
+
+
+    $scope.categoryData = function () {
+
+      Service.getCategory(function (data) {
+        if (data.data.value) {
+          $scope.categoryData = data.data.data.results;
+          $scope.categoryData = _.chunk($scope.categoryData,2)
+          console.log($scope.categoryData, data);
+          $scope.totalItems = data.data.data.total;
+          $scope.maxRow = data.data.data.options.count;
+        }
+      });
+
+
+    }
+    // console.log($scope.categoryData);
+    $scope.categoryData();
+
     $scope.tradeRoute = function () {
       $cordovaInAppBrowser.open('http://www.mybizpayetrade.com/', '_self', options)
         .then(function (event) {
@@ -138,4 +164,4 @@ angular
 
 
 
-  })
+  });
