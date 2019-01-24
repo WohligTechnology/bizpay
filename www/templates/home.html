@@ -6,7 +6,7 @@
     <div class="row" ng-repeat="x in categoryData">
       <div class="col padding" ng-repeat="category in x">
         <a class="button btn-radius card font-size" ng-class="{'button-positive':category.color=='blue','btn-color-account':category.color=='orange','button-calm':category.color=='light blue','button-balanced':category.color=='green','btn-color-corperate':category.color=='gray', 'button-assertive':category.color=='red','btn-color-rewards':category.color=='yellow', 'button-royal':category.color=='violet'}"
-          ng-click="redirectUrl({{category.url}});">
+          ng-click="redirectUrl(category.url);">
           <img class="vertical-center padding-bottom" ng-src="{{category.image | uploadpath }}" width="100%" alt="{{category.image}}">
         </a>
       </div>
